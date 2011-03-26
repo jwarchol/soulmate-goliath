@@ -8,13 +8,13 @@ This fork is an experimental fork of Soulmate to use http://goliath.io/
 For simple testing, use a haproxy config similar to the one included. Then run this code by 
 doing this:
 
-ruby server.rb -sv
+    ruby server.rb -sv
 
 In another terminal, run the original sinatra version (make sure you have the Thin app server gem). Then
 you can compare them with a test like this:
 
-ab -n 2000 -c 200 'http://ec2-75-101-212-134.compute-1.amazonaws.com/search?sinatra=true&types[]=WORD&term=abo'
-ab -n 2000 -c 200 'http://ec2-75-101-212-134.compute-1.amazonaws.com/search?goliath=true&types[]=WORD&term=abo'
+    ab -n 2000 -c 200 'http://ec2-75-101-212-134.compute-1.amazonaws.com/search?sinatra=true&types[]=WORD&term=abo'
+    ab -n 2000 -c 200 'http://ec2-75-101-212-134.compute-1.amazonaws.com/search?goliath=true&types[]=WORD&term=abo'
 
 
 
